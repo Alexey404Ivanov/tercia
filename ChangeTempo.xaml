@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tercia.ChangeTempo">
+    
+    <VerticalStackLayout Padding="20">
+        <Label Text="Изменить темп"
+                FontFamily="NunitoBold" 
+                TextColor="#00C2FF" 
+                FontSize="30" 
+                Margin="0,0,0,50" />
+        
+        <Label Text="Удары в минуту" 
+               FontSize="20" 
+               HorizontalOptions="Center" />
+        
+        <Label x:Name="ValueLabel" 
+               TextColor="#00C2FF"
+               FontSize="40" 
+               HorizontalOptions="Center" />
+        
+        <Slider x:Name="Slider"
+                Minimum="30"
+                Maximum="170"
+                Value="100"
+                BackgroundColor="#00C2FF"
+                ValueChanged="OnSliderValueChanged" />
+        
+        <Button Text="Применить" 
+                FontSize="18" 
+                BackgroundColor="#00C2FF"
+                Clicked="OnApplyClicked" />
+    </VerticalStackLayout>
+</ContentPage>
