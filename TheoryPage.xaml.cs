@@ -11,4 +11,24 @@ public partial class TheoryPage
     {
         
     }
+
+    private async void OnNotesPage(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NotesPage());
+    }
+
+    private async void OnCoursesPage(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CoursesPage());
+    }
+
+    private async void OnTheoryPage(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new TheoryPage());
+    }
+
+    private async void OnMetronomePage(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MetronomePage());
+    }
 }
