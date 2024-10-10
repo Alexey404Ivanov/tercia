@@ -41,12 +41,21 @@
                     FontFamily="NunitoSemiBold"
                     BackgroundColor="White"
                     FontSize="14"
-                    Margin="11,0,0,0"
+                    Margin="11,0,0,325"
                     HorizontalOptions="Start"
                     Clicked="OnSis"/>
+            <Button 
+                    BackgroundColor="#00C2FF"
+                    Text="Спросить AI"
+                    FontFamily="NunitoSemiBold"
+                    FontSize="15"
+                    WidthRequest="252"
+                    HeightRequest="59"
+                    CornerRadius="16"
+                    Clicked="OnAskingAiClicked"/>
         </StackLayout>   
         
-        <Grid VerticalOptions="End" Padding="0"  >
+        <Grid VerticalOptions="End" Padding="0" Margin="0,70,0,0" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -58,28 +67,28 @@
             <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
                 <Button BackgroundColor="Transparent" Text="Ноты" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="notes_icon.png" WidthRequest="85"
                         HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnNotesPage"/>
+                        ContentLayout="Top,1" Clicked="OnNotesPageClicked"/>
             </VerticalStackLayout>
 
             <!-- Кнопка Курсы -->
             <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
                 <Button BackgroundColor="Transparent" Text="Курсы" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="courses_icon.png" WidthRequest="85"
                         HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnCoursesPage"/>
+                        ContentLayout="Top,1" Clicked="OnCoursesPageClicked"/>
             </VerticalStackLayout>
 
             <!-- Кнопка Теория -->
             <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
                 <Button BackgroundColor="Transparent" Text="Теория" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="theory_icon.png" WidthRequest="85"
                         HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnTheoryPage"/>
+                        ContentLayout="Top,1" Clicked="OnTheoryPageClicked"/>
             </VerticalStackLayout>
 
             <!-- Кнопка Метроном -->
             <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
                 <Button BackgroundColor="Transparent" Text="Метроном" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="metronome_icon.png" WidthRequest="85"
                         HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnMetronomePage"/>
+                        ContentLayout="Top,1" Clicked="OnMetronomePageClicked"/>
             </VerticalStackLayout>
         </Grid>
     </Grid>
