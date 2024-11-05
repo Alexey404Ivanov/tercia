@@ -66,21 +66,65 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="AudioWork.cs">
-	    <DependentUpon>MetronomePage.xaml</DependentUpon>
+	  <Compile Update="Pages\CoursesPage.xaml.cs">
+	    <DependentUpon>CoursesPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
 	  </Compile>
-	  <Compile Update="Metronome.cs">
+	  <Compile Update="Pages\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\MetronomePage.xaml.cs">
 	    <DependentUpon>MetronomePage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\ChangerTimeSignature.xaml.cs">
+	    <DependentUpon>ChangerTimeSignature.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\ChangeTempo.xaml.cs">
+	    <DependentUpon>ChangeTempo.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\NotesPage.xaml.cs">
+	    <DependentUpon>NotesPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\TheoryPage.xaml.cs">
+	    <DependentUpon>TheoryPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ChangerTimeSignature.xaml">
+	  <MauiXaml Update="Pages\CoursesPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MainPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MetronomePage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ChangerTimeSignature.xaml">
+	    <SubType>Designer</SubType>
 	    <DependentUpon>MetronomePage.xaml</DependentUpon>
 	  </MauiXaml>
-	  <MauiXaml Update="ChangeTempo.xaml">
+	  <MauiXaml Update="Pages\ChangeTempo.xaml">
+	    <SubType>Designer</SubType>
 	    <DependentUpon>MetronomePage.xaml</DependentUpon>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\NotesPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\TheoryPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AdditionalFiles Include="Pages\ChangerTimeSignature.xaml" />
+	  <AdditionalFiles Include="Pages\ChangeTempo.xaml" />
 	</ItemGroup>
 	
 
