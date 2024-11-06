@@ -1,44 +1,72 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:terciaCore="clr-namespace:Tercia.TerciaCore"
-             x:Class="Tercia.CoursesPage">
+             xmlns:pages="using:Tercia.Pages"
+             x:Class="Tercia.Pages.CoursesPage">
     <StackLayout>
         <Label Text="Курсы"
-               FontFamily="NunitoBold" 
-               TextColor="#00C2FF" 
+               FontFamily="NunitoBold"
+               TextColor="#00C2FF"
                Margin="20,0,0,40"
                FontSize="30" />
-    
-        
-        <ListView ItemsSource="{Binding Courses}" BackgroundColor="Aqua">
+
+
+        <ListView
+            ItemsSource="{Binding Courses}"
+            ItemSelected="OnItemSelected"
+            BackgroundColor="#00C2FF">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            
-                            <Label Grid.Column="1"
+                        <Grid
+                            HeightRequest="83"
+                            ColumnDefinitions="*, *"
+                            RowDefinitions="*"
+                            x:DataType="terciaCore:Course">
+
+                            <Label Grid.Column="0"
+                                   Padding="10"
                                    Text="{Binding Name}"
-                                   FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                                   Grid.Column="1"
-                                   Text="{Binding Id}"
-                                   FontAttributes="Italic"
-                                   VerticalOptions="End" />
+                                   FontAttributes="Bold"
+                                   VerticalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center" />
+
+                            <Grid Grid.Column="1">
+                                <Image HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       Aspect="AspectFill"
+                                       BackgroundColor="#00C2FF">
+                                    <Image.Source>
+                                        <UriImageSource
+                                            Uri="{Binding CoverUrl}"
+                                            CacheValidity="10:00:00:00" />
+                                    </Image.Source>
+                                </Image>
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand">
+                                    <Label.Background>
+                                        <LinearGradientBrush EndPoint="1,0">
+                                            <GradientStop Color="#00C2FF"
+                                                          Offset="0.0" />
+                                            <GradientStop Color="Transparent"
+                                                          Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Label.Background>
+                                </Label>
+
+                            </Grid>
                         </Grid>
+
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        
+
     </StackLayout>
 </ContentPage>

@@ -1,4 +1,6 @@
-﻿namespace Tercia;
+﻿using Tercia.Pages;
+
+namespace Tercia;
 
 public partial class TheoryPage
 {

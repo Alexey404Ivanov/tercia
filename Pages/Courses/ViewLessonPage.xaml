@@ -4,6 +4,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tercia.Pages.Courses.ViewLessonPage">
     <ContentPage.Content>
-        <WebView />
+        <StackLayout>
+            <Label x:Name="LessonTitle" />
+            <WebView x:Name="VideoPlayer"
+                     HeightRequest="360"
+                     WidthRequest="640"
+                     BackgroundColor="Green" />
+            <Label Text="description" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
