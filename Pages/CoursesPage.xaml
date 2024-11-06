@@ -12,7 +12,6 @@
                Margin="20,0,0,40"
                FontSize="30" />
 
-
         <ListView
             ItemsSource="{Binding Courses}"
             ItemSelected="OnItemSelected"

@@ -4,13 +4,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tercia.Pages.Courses.ViewLessonPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="LessonTitle" />
+        <StackLayout >
+            <Label x:Name="LessonTitle"
+                   Text="{Binding Title}"
+                   FontFamily="NunitoBold"
+                   TextColor="#00C2FF"
+                   Margin="20,0,0,40"
+                   FontSize="30" />
+            
             <WebView x:Name="VideoPlayer"
                      HeightRequest="360"
                      WidthRequest="640"
-                     BackgroundColor="Green" />
-            <Label Text="description" />
+                     BackgroundColor="#939396" 
+                     Source="{Binding Link}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

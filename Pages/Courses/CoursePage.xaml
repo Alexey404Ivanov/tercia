@@ -6,7 +6,13 @@
              x:Class="Tercia.Pages.Courses.CoursePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="CourseName" />
+            <Label x:Name="CourseName" 
+                   Text="Название курса"
+                   FontFamily="NunitoBold"
+                   TextColor="#00C2FF"
+                   Margin="20,0,0,40"
+                   FontSize="30" />
+            
             <ListView x:Name="LessonsList"
                       ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
@@ -14,7 +20,8 @@
                         <ViewCell x:DataType="terciaCore:Lesson">
                             <Label
                                 Text="{Binding Title}"
-                                FontAttributes="Bold" />
+                                FontAttributes="Bold" 
+                                Padding="10"/>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
