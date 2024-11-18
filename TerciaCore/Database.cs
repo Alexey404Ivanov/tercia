@@ -11,7 +11,7 @@ public static class Database
     {
         if (!Lessons.ContainsKey(courseId))
         {
-            var response = await HttpClient.GetFromJsonAsync<List<Lesson>>($"/get-course-lessons?lesson_id={courseId}");
+            var response = await HttpClient.GetFromJsonAsync<List<Lesson>>($"/get-course-lessons?course_id={courseId}");
             if (response is null)
                 throw new Exception($"Could not fetch lessons for course {courseId}");
             Lessons[courseId] = response;
@@ -20,7 +20,7 @@ public static class Database
         return Lessons[courseId];
     }
 
-    public static async Task<List<Course>?> GetAllCourses()
+    public static async Task<List<Course>> GetAllCourses()
     {
         if (_courses is null)
             _courses = await HttpClient.GetFromJsonAsync<List<Course>>("/get-courses");

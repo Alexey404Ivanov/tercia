@@ -20,13 +20,17 @@ public partial class CoursesPage
     {
         if (Courses.Count > 0)
             return;
-        var courses = await Database.GetAllCourses();
-        if (courses is null)
-            //TODO: сообщение об ошибке
-            return;
-        
-        foreach (var course in courses)
-            Courses.Add(course);
+        try
+        {
+            var courses = await Database.GetAllCourses();
+
+            foreach (var course in courses)
+                Courses.Add(course);
+        }
+        catch (Exception)
+        {
+            await DisplayAlert("Ошибка сети", "Не удалось загрузить курсы", "Ок");
+        }
     }
     
     private async void OnItemSelected(object? sender, SelectedItemChangedEventArgs e)

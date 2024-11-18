@@ -19,14 +19,16 @@ public partial class CoursePage : ContentPage
     {
         if (Lessons.Count > 0)
             return;
-        var lessons = await Database.GetCourseLessons(_course.Id);
-        
-        if (lessons is null)
-            //TODO: сообщение об ошибке
-            return;
-         
-        foreach (var lesson in lessons)
-            Lessons.Add(lesson);
+        try
+        {
+            var lessons = await Database.GetCourseLessons(_course.Id);
+            foreach (var lesson in lessons)
+                Lessons.Add(lesson);
+        }
+        catch (Exception)
+        {
+            await DisplayAlert("Ошибка сети", "Не удалось загрузить уроки", "Ок");
+        }
     }
 
     private void OnItemSelected(object? sender, SelectedItemChangedEventArgs e)
