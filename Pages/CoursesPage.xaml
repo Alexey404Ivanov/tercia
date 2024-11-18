@@ -13,6 +13,7 @@
                FontSize="30" />
 
         <ListView
+            x:DataType="pages:CoursesPage"
             ItemsSource="{Binding Courses}"
             ItemSelected="OnItemSelected"
             BackgroundColor="#00C2FF">
