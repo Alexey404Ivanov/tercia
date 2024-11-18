@@ -15,8 +15,7 @@
         <ListView
             x:DataType="pages:CoursesPage"
             ItemsSource="{Binding Courses}"
-            ItemSelected="OnItemSelected"
-            BackgroundColor="#00C2FF">
+            ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -24,7 +23,8 @@
                             HeightRequest="83"
                             ColumnDefinitions="*, *"
                             RowDefinitions="*"
-                            x:DataType="terciaCore:Course">
+                            x:DataType="terciaCore:Course"
+                            BackgroundColor="#00C2FF">
 
                             <Label Grid.Column="0"
                                    Padding="10"
