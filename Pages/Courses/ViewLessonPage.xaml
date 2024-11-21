@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tercia.Pages.Courses.ViewLessonPage">
     <ContentPage.Content>
-        <StackLayout >
+        <StackLayout>
             <Label x:Name="LessonTitle"
                    Text="{Binding Title}"
                    FontFamily="NunitoBold"
@@ -16,7 +16,7 @@
                      HeightRequest="360"
                      WidthRequest="640"
                      BackgroundColor="#939396" 
-                     Source="{Binding Link}"/>
+                     Source="{Binding Video_Url}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
