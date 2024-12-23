@@ -8,8 +8,5 @@ public partial class ViewLessonPage : ContentPage
     {
         InitializeComponent();
         BindingContext = lesson;
-        // LessonTitle.Text = lesson.Title;
-        // VideoPlayer.Source = lesson.Link;
-        // VideoPlayer.Reload();
     }
 }

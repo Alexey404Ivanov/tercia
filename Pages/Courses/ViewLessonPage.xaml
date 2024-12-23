@@ -2,11 +2,11 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:terciaCore="clr-namespace:Tercia.TerciaCore"
              x:Class="Tercia.Pages.Courses.ViewLessonPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="LessonTitle"
-                   Text="{Binding Title}"
+        <StackLayout x:DataType="terciaCore:Lesson" x:Name="Page">
+            <Label Text="{Binding Title}"
                    FontFamily="NunitoBold"
                    TextColor="#00C2FF"
                    Margin="20,0,0,40"
@@ -15,8 +15,9 @@
             <WebView x:Name="VideoPlayer"
                      HeightRequest="360"
                      WidthRequest="640"
+                     MaximumWidthRequest="{Binding Source={x:Reference Page}, Path=Width}"
                      BackgroundColor="#939396" 
-                     Source="{Binding Video_Url}"/>
+                     Source="{Binding VideoUrl}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -44,15 +44,6 @@
                     Margin="11,0,0,325"
                     HorizontalOptions="Start"
                     Clicked="OnSis"/>
-            <Button 
-                    BackgroundColor="#00C2FF"
-                    Text="Спросить AI"
-                    FontFamily="NunitoSemiBold"
-                    FontSize="15"
-                    WidthRequest="252"
-                    HeightRequest="59"
-                    CornerRadius="16"
-                    Clicked="OnAskingAiClicked"/>
         </StackLayout>   
         
         <Grid VerticalOptions="End" Padding="0" Margin="0,70,0,0" >
