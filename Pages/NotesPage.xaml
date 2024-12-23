@@ -2,9 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tercia.NotesPage">
-    <Label Text="Ноты"
-           FontFamily="NunitoBold" 
-           TextColor="#00C2FF" 
-           Margin="20,0,0,40"
-           FontSize="30" />
+    <StackLayout>
+        <Label Text="Ноты"
+               FontFamily="NunitoBold" 
+               TextColor="#00C2FF" 
+               Margin="20,0,0,40"
+               FontSize="30" />
+        
+        <Image Source="notes.png" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               Aspect="AspectFit" />
+    </StackLayout>
 </ContentPage>
