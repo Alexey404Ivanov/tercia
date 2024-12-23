@@ -2,13 +2,7 @@
 
 public class Metronome
 {
-    public int Bpm;
-    public Tuple<int, int> TimeSignature;
+    public int Bpm = 120;
+    public Tuple<int, int> TimeSignature = new(4, 4);
     public bool IsActive;
-
-    public Metronome()
-    {
-        Bpm = 120;
-        TimeSignature = new Tuple<int, int>(4, 4);
-    }
 }

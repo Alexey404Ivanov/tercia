@@ -6,5 +6,4 @@ public class Course
     public string Name { get; init; }
     public string? CoverUrl { get; init; }
     public List<Lesson> Lessons { get; init; }
-    
 }

@@ -8,10 +8,5 @@ public partial class MainPage
     {
         InitializeComponent();
     }
-
-    private void OnAskAiButtonClicked(object sender, EventArgs e)
-    {
-        
-    }
 }
 
