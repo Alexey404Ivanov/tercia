@@ -125,6 +125,10 @@
 	  <AdditionalFiles Include="Pages\ChangerTimeSignature.xaml" />
 	  <AdditionalFiles Include="Pages\ChangeTempo.xaml" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\network_security_config.xml" />
+	</ItemGroup>
 	
 
 </Project>
