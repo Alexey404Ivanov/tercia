@@ -15,6 +15,7 @@ public partial class CoursePage : ContentPage
         Lessons = new ObservableCollection<Lesson>();
         BindingContext = this;
     }
+    
     protected override async void OnAppearing()
     {
         if (Lessons.Count > 0)

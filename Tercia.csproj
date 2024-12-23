@@ -20,7 +20,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>NewMauiApp</ApplicationTitle>
+		<ApplicationTitle>Tercia</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.newmauiapp</ApplicationId>
