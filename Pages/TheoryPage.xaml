@@ -53,34 +53,6 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
-            <!-- Кнопка Ноты -->
-            <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
-                <Button BackgroundColor="Transparent" Text="Ноты" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="notes_icon.png" WidthRequest="85"
-                        HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnNotesPageClicked"/>
-            </VerticalStackLayout>
-
-            <!-- Кнопка Курсы -->
-            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
-                <Button BackgroundColor="Transparent" Text="Курсы" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="courses_icon.png" WidthRequest="85"
-                        HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnCoursesPageClicked"/>
-            </VerticalStackLayout>
-
-            <!-- Кнопка Теория -->
-            <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
-                <Button BackgroundColor="Transparent" Text="Теория" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="theory_icon.png" WidthRequest="85"
-                        HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnTheoryPageClicked"/>
-            </VerticalStackLayout>
-
-            <!-- Кнопка Метроном -->
-            <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
-                <Button BackgroundColor="Transparent" Text="Метроном" TextColor="#36363D" FontFamily="NunitoSemiBold" FontSize="11" ImageSource="metronome_icon.png" WidthRequest="85"
-                        HeightRequest="75"
-                        ContentLayout="Top,1" Clicked="OnMetronomePageClicked"/>
-            </VerticalStackLayout>
         </Grid>
     </Grid>
 </ContentPage>

@@ -6,7 +6,7 @@
         {
             InitializeComponent();
             Current.UserAppTheme = AppTheme.Light;
-            MainPage = new NavigationPage(new TheoryPage());
+            MainPage = new AppShell();
         }
     }
 }

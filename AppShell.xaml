@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="Tercia.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Tercia"
-    xmlns:tercia="clr-namespace:Tercia"
-    Shell.FlyoutBehavior="Disabled"
-    Title="Tercia">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:tercia="clr-namespace:Tercia"
+       xmlns:pages="clr-namespace:Tercia.Pages"
+       x:Class="Tercia.AppShell"
+       BackgroundColor="White"
+       ForegroundColor="#00C2FF">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate tercia:TheoryPage}"
-        Route="Metronome" />
+    <TabBar>
+        <!-- Вкладка "Ноты" -->
+        <ShellContent 
+            Title="Ноты" 
+            Icon="notes_icon.png"
+            ContentTemplate="{DataTemplate tercia:NotesPage}" 
+            Shell.NavBarIsVisible="False"/>
 
+        <!-- Вкладка "Курсы" -->
+        <ShellContent 
+            Title="Курсы" 
+            Icon="courses_icon.png"
+            ContentTemplate="{DataTemplate pages:CoursesPage}" 
+            Shell.NavBarIsVisible="False"/>
+
+        <!-- Вкладка "Теория" -->
+        <ShellContent 
+            Title="Теория" 
+            Icon="theory_icon.png"
+            ContentTemplate="{DataTemplate tercia:TheoryPage}" 
+            Shell.NavBarIsVisible="False"/>
+
+        <!-- Вкладка "Метроном" -->
+        <ShellContent 
+            Title="Метроном" 
+            Icon="metronome_icon.png"
+            ContentTemplate="{DataTemplate tercia:MetronomePage}" 
+            Shell.NavBarIsVisible="False"/>
+    </TabBar>
 </Shell>
