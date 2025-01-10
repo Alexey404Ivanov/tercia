@@ -3,21 +3,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:terciaCore="clr-namespace:Tercia.TerciaCore"
+             xmlns:courses="clr-namespace:Tercia.Pages.Courses"
              x:Class="Tercia.Pages.Courses.ViewLessonPage">
     <ContentPage.Content>
-        <StackLayout x:DataType="terciaCore:Lesson" x:Name="Page">
-            <Label Text="{Binding Title}"
-                   FontFamily="NunitoBold"
-                   TextColor="#00C2FF"
-                   Margin="20,0,0,40"
-                   FontSize="30" />
+        <!-- <ScrollView Orientation="Both" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> -->
+            <StackLayout x:DataType="terciaCore:Lesson" x:Name="Page" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Text="{Binding Title}"
+                       FontFamily="NunitoBold"
+                       TextColor="#00C2FF"
+                       Margin="20,0,0,40"
+                       FontSize="30" />
             
-            <WebView x:Name="VideoPlayer"
-                     HeightRequest="360"
-                     WidthRequest="640"
-                     MaximumWidthRequest="{Binding Source={x:Reference Page}, Path=Width}"
-                     BackgroundColor="#939396" 
-                     Source="{Binding VideoUrl}"/>
-        </StackLayout>
+                <WebView x:Name="VideoPlayer"
+                         WidthRequest="300"
+                         HeightRequest="200"
+                         BackgroundColor="#939396" 
+                         Source="{Binding VideoUrl}" x:DataType="courses:ViewLessonPage" />
+            </StackLayout>
+        <!-- </ScrollView> -->
     </ContentPage.Content>
 </ContentPage>
