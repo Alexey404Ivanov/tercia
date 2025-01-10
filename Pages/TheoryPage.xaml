@@ -7,7 +7,7 @@
             <Label Text="Теория"
                    FontFamily="NunitoBold" 
                    TextColor="#00C2FF" 
-                   Margin="20,0,0,40"
+                   Margin="20,30,0,40"
                    FontSize="30" />
             
             <Button Text="Аккорды"
@@ -21,7 +21,7 @@
             
             <BoxView HeightRequest="1"
                      Color="Gainsboro"
-                     Margin="27,0,27,0"/>
+                     Margin="20,0,20,0"/>
             
             <Button Text="Знаки в тональности"
                     TextColor="Black"
@@ -34,7 +34,7 @@
             
             <BoxView HeightRequest="1"
                      Color="Gainsboro"
-                     Margin="27,0,27,0"/>
+                     Margin="20,0,20,0"/>
             
             <Button Text="Ритм и темп"
                     TextColor="Black"

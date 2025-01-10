@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tercia.ChangerTimeSignature">
              
-    <VerticalStackLayout Padding="15">
-        <Label Text="Изменить темп"
+    <VerticalStackLayout Padding="20">
+        <Label Text="Изменить размер такта"
                FontFamily="NunitoBold" 
                TextColor="#00C2FF" 
                FontSize="30"

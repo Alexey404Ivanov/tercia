@@ -11,7 +11,7 @@
                 <Label Text="{Binding Title}"
                        FontFamily="NunitoBold"
                        TextColor="#00C2FF"
-                       Margin="20,0,0,40"
+                       Margin="20,30,0,40"
                        FontSize="30" />
             
                 <WebView x:Name="VideoPlayer"
