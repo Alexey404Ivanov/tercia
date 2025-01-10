@@ -23,7 +23,7 @@
                 Minimum="30"
                 Maximum="170"
                 Value="100"
-                BackgroundColor="#00C2FF"
+                BackgroundColor="#FFFFFF"
                 ValueChanged="OnSliderValueChanged" />
         
         <Button Text="Применить" 
